@@ -5,7 +5,7 @@
 
     <TextView
         android:id="@+id/userText"
-        android:text="LEVEL 1 PAGE"
+        android:text="LEVEL 1 PAGE sadf"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
