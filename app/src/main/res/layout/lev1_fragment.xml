@@ -7,7 +7,6 @@
         android:id="@+id/userlev1_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/my_toolbar"
         android:layout_above="@id/main_middle_guide"
         android:orientation="horizontal"
         android:weightSum="7">
@@ -126,7 +125,9 @@
                 android:textColor="@color/colorBtn"
                 android:textSize="28sp"
                 android:layout_weight="1"/>
+
         </LinearLayout>
+
     </LinearLayout>
     <TextView
         android:id="@+id/main_end_guide"
@@ -138,6 +139,5 @@
         android:text="@string/bottomGuide"
         android:textAlignment="center"
         android:textSize="18sp" />
-
 
 </RelativeLayout>
