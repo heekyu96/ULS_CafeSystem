@@ -7,7 +7,6 @@
         android:id="@+id/userlev1_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/my_toolbar"
         android:layout_above="@id/main_middle_guide"
         android:orientation="horizontal"
         android:weightSum="7">
@@ -131,7 +130,6 @@
 
     </LinearLayout>
     <TextView
-<<<<<<< HEAD
         android:id="@+id/main_end_guide"
         android:layout_width="match_parent"
         android:layout_height="52dp"
@@ -141,12 +139,5 @@
         android:text="@string/bottomGuide"
         android:textAlignment="center"
         android:textSize="18sp" />
-=======
-        android:id="@+id/userText"
-        android:text="LEVEL 1 PAGE"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
->>>>>>> 53046bbf58c4f3f37bc5fd30f1ba9b8b357dc42f
 
 </RelativeLayout>
