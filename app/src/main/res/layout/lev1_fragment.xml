@@ -3,11 +3,142 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/userlev1_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_above="@id/main_middle_guide"
+        android:orientation="horizontal"
+        android:weightSum="7">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@mipmap/ic_order_checking"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_navigate_next_black_24dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@mipmap/ic_order_cooking"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_navigate_next_black_24dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@mipmap/ic_order_complete"
+            />
+
+    </LinearLayout>
     <TextView
-        android:id="@+id/userText"
-        android:text="LEVEL 1 PAGE sadf"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/main_middle_guide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:background="#785c4e"
+        android:paddingTop="8dp"
+        android:text="@string/endGuide"
+        android:textAlignment="center"
+        android:textColor="#fff" />
+
+    <LinearLayout
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_end_guide"
+        android:layout_below="@+id/main_middle_guide"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <Button
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_coffee"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/order"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+            <Button
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:drawableTop="@mipmap/ic_membership"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="10dp"
+                android:text="@string/membership"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_list"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="18dp"
+                android:text="@string/order_list"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="20sp"/>
+            <Button
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/event"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="28sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/main_end_guide"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGray"
+        android:paddingTop="12dp"
+        android:text="@string/bottomGuide"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
 </RelativeLayout>

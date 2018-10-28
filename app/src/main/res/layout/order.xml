@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageButton
+        android:id="@+id/kanu"
+        android:layout_below="@id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/ic_kanu"
+        android:padding="10dp" />
+    <View
+        android:id="@+id/textline1"
+        android:layout_below="@+id/kanu"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+    <ImageButton
+        android:id="@+id/maxim"
+        android:layout_below="@id/textline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/ic_maxim"
+        android:padding="10dp"/>
+    <View
+        android:id="@+id/textline2"
+        android:layout_below="@+id/maxim"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+    <ImageButton
+        android:id="@+id/nescafe"
+        android:layout_below="@id/textline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/ic_nescafe"
+        android:padding="10dp"/>
+    <View
+        android:id="@+id/textline3"
+        android:layout_below="@+id/nescafe"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+    <ImageButton
+        android:id="@+id/greentea"
+        android:layout_below="@id/textline3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/ic_greentea"
+        android:padding="10dp"/>
+    <View
+        android:id="@+id/textline4"
+        android:layout_below="@+id/greentea"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+
+</RelativeLayout>

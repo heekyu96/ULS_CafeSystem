@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ULS_CafeSystem</string>
+    <string name="app_name">COFFEE</string>
+    <string name="endGuide">완료 예정시간은 4분 입니다.\n 잠시만 기다려 주세요.</string>
+    <string name="bottomGuide">충북대점에 오신걸 환영합니다!</string>
+    <string name="menu">Menu</string>
+    <string name="membership">Membership</string>
+    <string name="order">Order</string>
+    <string name="order_list">Order List</string>
+    <string name="event">Event</string>
+    <string name="kanu">KANU</string>
 </resources>
+
