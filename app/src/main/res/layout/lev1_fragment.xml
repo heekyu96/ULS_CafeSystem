@@ -126,9 +126,7 @@
                 android:textColor="@color/colorBtn"
                 android:textSize="28sp"
                 android:layout_weight="1"/>
-
         </LinearLayout>
-
     </LinearLayout>
     <TextView
         android:id="@+id/main_end_guide"
