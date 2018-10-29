@@ -8,5 +8,8 @@
     <string name="order_list">Order List</string>
     <string name="event">Event</string>
     <string name="kanu">KANU</string>
+    <string name="orderitem">- KANU</string>
+    <string name="complete">완료</string>
+    <string name="cancel">취소</string>
 </resources>
 

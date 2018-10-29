@@ -6,5 +6,7 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorGray">#cccccc</color>
     <color name="colorBtn">#563320</color>
+    <color name="completeBtn">#9f7664</color>
+    <color name="cancelBtn">#aea097</color>
 </resources>
 
