@@ -72,7 +72,7 @@
                         android:background="@color/completeBtn"
                         android:text="@string/complete"
                         android:textColor="@color/colorWhite"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
 
                     <Button
                         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                         android:background="@color/cancelBtn"
                         android:text="@string/cancel"
                         android:textColor="@color/colorWhite"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
 
 
@@ -97,7 +97,7 @@
         android:weightSum="2"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorGray"
+        android:background="@color/colorlightGray"
         style="?android:attr/buttonBarStyle">
         <Button
             android:layout_width="0dp"
