@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/orderlist_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:weightSum="2">
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:weightSum="2">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/shadow"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="false">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:background="@color/completeBtn" />
+
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:layout_weight="1">
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="2"
                     android:padding="10dp">
 
                     <TextView
@@ -35,118 +43,86 @@
                         android:layout_height="wrap_content"
                         android:text="NO.1"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="25sp"
+                        android:textSize="32sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/number"
+                        android:layout_marginTop="10dp"
                         android:text="@string/orderitem"
-                        android:layout_marginTop="7dp"
-                        android:textSize="15sp" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="0dp"
-                        android:layout_alignParentBottom="true"
-                        android:weightSum="2"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="0.8"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
-                            android:background="@color/completeBtn"
-                            android:text="@string/complete"
-                            android:layout_margin="3dp"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="0.8"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
-                            android:background="@color/cancelBtn"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cancel"
-                            android:layout_margin="3dp"/>
-                    </LinearLayout>
-
+                        android:textSize="22sp" />
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:layout_weight="1">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:padding="10dp">
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:weightSum="2">
 
-                    <TextView
-                        android:id="@+id/number2"
+                    <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="NO.2"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="0.8"
+                        android:background="@color/completeBtn"
+                        android:text="@string/complete"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
 
-                    <TextView
+                    <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/number2"
-                        android:text="@string/orderitem"
-                        android:layout_marginTop="7dp"
-                        android:textSize="15sp" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="0dp"
-                        android:layout_alignParentBottom="true"
-                        android:weightSum="2"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="0.8"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
-                            android:background="@color/completeBtn"
-                            android:text="@string/complete"
-                            android:layout_margin="3dp"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="0.8"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="12sp"
-                            android:background="@color/cancelBtn"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cancel"
-                            android:layout_margin="3dp"/>
-                    </LinearLayout>
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
+                        android:layout_height="0dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="0.8"
+                        android:background="@color/cancelBtn"
+                        android:text="@string/cancel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
 
-    </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
     <LinearLayout
         android:id="@+id/staffbtn"
-        android:layout_below="@+id/orderlist_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGray"
+        style="?android:attr/buttonBarStyle">
         <Button
             android:layout_width="0dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorBtn"
             android:layout_weight="1"
+            android:drawableStart="@mipmap/ic_calendar"
+            android:text="@string/attendance"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"/>
+        <Button
+            android:layout_width="0dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorBtn"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:drawableStart="@mipmap/ic_beacon"
+            android:text="@string/beacon"
             android:layout_height="match_parent" />
     </LinearLayout>
 </RelativeLayout>
