@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    app:cardMaxElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/completeBtn" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lev2_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NO.1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lev2_card_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lev2_card_number"
+                android:layout_marginTop="10dp"
+                android:text="@string/orderitem"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/lev2_card_complete"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:layout_weight="0.8"
+                android:background="@color/completeBtn"
+                android:text="@string/complete"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/lev2_card_cancle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:layout_weight="0.8"
+                android:background="@color/cancelBtn"
+                android:text="@string/cancel"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
