@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
 import com.example.heegi.uls_cafesystem.fragments.DefaultFragment;
 import com.example.heegi.uls_cafesystem.fragments.Level1Fragment;
 import com.example.heegi.uls_cafesystem.fragments.Level2Fragment;
+import com.example.heegi.uls_cafesystem.fragments.Level3Fragment;
 import com.example.heegi.uls_cafesystem.services.BluetoothSearchService;
 import com.example.heegi.uls_cafesystem.R;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private DefaultFragment defaultFragment;
     private Level1Fragment level1Fragment;
     private Level2Fragment level2Fragment;
+    private Level3Fragment level3Fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         defaultFragment = new DefaultFragment();
         level1Fragment = new Level1Fragment();
         level2Fragment = new Level2Fragment();
+        level3Fragment = new Level3Fragment();
 
         fragmentManager = getSupportFragmentManager();
 
@@ -84,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                     break;
                 case 3:
+                    fragmentTransaction.replace(R.id.main_frame,level3Fragment);
+                    fragmentTransaction.commit();
                     break;
 
             }

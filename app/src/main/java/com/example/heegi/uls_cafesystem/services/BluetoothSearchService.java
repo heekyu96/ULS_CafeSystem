@@ -68,13 +68,14 @@ public class BluetoothSearchService extends Service {
         @Override
         public void onBeaconsDiscovered(BeaconRegion beaconRegion, List<Beacon> beacons) {
             beaconManager.stopRanging(beaconRegion);
-            for (int i = 0; i < beacons.size(); i++) {
+            for (int i = 1; i < beacons.size(); i++) {
                 Beacon result = beacons.get(i);
                 Log.d("ScanResultLog", (i + 1) + ". SSID : " + result.getMinor()
                         + " RSSI : " + result.getRssi() + " dBm\n");
 
             }
-            beaconVerifing(beacons.get(0).getMinor()+"");
+                beaconVerifing(beacons.get(0).getMinor() + "");
+
         }
 
         private void beaconVerifing(String beaconMinor){
