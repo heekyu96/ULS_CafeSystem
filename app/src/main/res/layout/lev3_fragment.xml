@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--########## IoT Control ##########-->
+    <LinearLayout
+        android:id="@+id/iotDevices"
+        android:layout_above="@id/controlBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorGray"
+        android:weightSum="5">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:background="@color/colorWhite"
+            android:text="@string/devices"/>
+
+    </LinearLayout>
+
+
+    <!--########## Control Buttons ##########-->
+    <LinearLayout
+        android:id="@+id/controlBtn"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:background="@color/colorGray"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <!--########## Leave Button ##########-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_business_center_black_24dp"
+            android:textColor="@color/colorDark_gray"
+            android:text="@string/leave"/>
+        <FrameLayout
+            android:layout_width="2.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:background="@color/colorDark_gray"/>
+
+        <!--########## Turn On Button ##########-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_power_settings_new_black_24dp"
+            android:textColor="@color/colorDark_gray"
+            android:text="@string/turnOn"/>
+        <FrameLayout
+            android:layout_width="2.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:background="@color/colorDark_gray"/>
+
+        <!--########## Sleep Button ##########-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/colorDark_gray"
+            android:text="@string/sleep"/>
+
+    </LinearLayout>
+
+    <!--########## Menu Buttons ##########-->
+    <LinearLayout
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/controlBtn"
+        android:layout_above="@id/main_end_guide"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <!--########## First linear Buttons ##########-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <Button
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_coffee"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/menu"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+            <Button
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_sales"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/sales"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <!--########## Second linear Buttons ##########-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_stock"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/stock"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+            <Button
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_staff"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/staff"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--########## END GUIDE ##########-->
+    <TextView
+        android:id="@+id/main_end_guide"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGray"
+        android:paddingTop="12dp"
+        android:text="@string/haveAgoodTime"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+</RelativeLayout>

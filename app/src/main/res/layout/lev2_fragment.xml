@@ -16,6 +16,7 @@
         app:cardMaxElevation="5dp"
         app:cardPreventCornerOverlap="false">
 
+        <!--########## CardView Top Line ##########-->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="5dp"
@@ -32,12 +33,15 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
+            <!--########## CardView Leftarea(orderList) ##########-->
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:padding="10dp">
 
+
+                <!--########## Number ##########-->
                 <TextView
                     android:id="@+id/number"
                     android:layout_width="match_parent"
@@ -47,6 +51,7 @@
                     android:textSize="32sp"
                     android:textStyle="bold" />
 
+                <!--########## Order Item ##########-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -56,6 +61,7 @@
                     android:textSize="22sp" />
             </RelativeLayout>
 
+            <!--########## Complte / Cancel Buttons ##########-->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -100,7 +106,7 @@
         android:weightSum="2"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorlightGray"
+        android:background="@color/color_lightGray"
         style="?android:attr/buttonBarStyle">
         <Button
             android:layout_width="0dp"

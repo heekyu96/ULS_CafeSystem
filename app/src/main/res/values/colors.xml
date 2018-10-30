@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="colorGray">#cccccc</color>
+    <color name="colorGray">#c1c1c1</color>
     <color name="colorBtn">#563320</color>
     <color name="completeBtn">#9f7664</color>
     <color name="cancelBtn">#aea097</color>
-    <color name="colorlightGray">#cee4dddd</color>
-
+    <color name="color_lightGray">#ceede8e8</color>
+    <color name="colorDark_gray">#cc333333</color>
 </resources>
 

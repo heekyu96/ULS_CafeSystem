@@ -11,34 +11,99 @@
         android:layout_above="@id/main_middle_guide"
         android:orientation="horizontal"
         android:weightSum="7">
-        <ImageView
+
+        <!--########## order cheching ##########-->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@mipmap/ic_order_checking"
-            />
+            android:orientation="vertical"
+            android:weightSum="3">
+            <ImageView
+                android:paddingTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@mipmap/ic_order_checking"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="0.5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="@string/orderAccept"/>
+        </LinearLayout>
+
+        <!--########## nebigate next ########## -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:src="@drawable/ic_navigate_next_black_24dp"/>
-        <ImageView
+
+
+        <!--########## order cooking ##########-->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@mipmap/ic_order_cooking"
-            />
+            android:orientation="vertical"
+            android:weightSum="3">
+            <ImageView
+                android:paddingTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@mipmap/ic_order_cooking"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="0.5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="@string/orderCook"/>
+        </LinearLayout>
+
+        <!--########## nebigate next ########## -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:src="@drawable/ic_navigate_next_black_24dp"/>
-        <ImageView
+
+        <!--########## order complete ##########-->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@mipmap/ic_order_complete"
-            />
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:paddingTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@mipmap/ic_order_complete"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="0.5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="@string/orderComplete"/>
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
