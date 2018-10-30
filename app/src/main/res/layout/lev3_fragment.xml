@@ -28,6 +28,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!--########## ScrollView ##########-->
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
@@ -42,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
+                <!--########## Light Button ##########-->
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -63,6 +65,7 @@
                         android:text="@string/light"/>
                 </LinearLayout>
 
+                <!--########## Air Condition Button ##########-->
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -84,6 +87,7 @@
                         android:text="@string/airCondition"/>
                 </LinearLayout>
 
+                <!--########## Coffee Machine Button ##########-->
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -107,6 +111,7 @@
                 </LinearLayout>
 
 
+                <!--########## Plus Button ########## -->
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"

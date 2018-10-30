@@ -6,6 +6,7 @@
     <string name="bottomGuide">충북대점에 오신걸 환영합니다!</string>
     <!--menu bar-->
     <string name="menu">Menu</string>
+    <string name="store">Store</string>
     <string name="membership">Membership</string>
     <string name="order">Order</string>
     <string name="order_list">Order List</string>
