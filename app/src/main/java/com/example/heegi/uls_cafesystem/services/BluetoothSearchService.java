@@ -96,24 +96,24 @@ public class BluetoothSearchService extends Service {
     @SuppressLint("StaticFieldLeak")
     private class UserLeveQuery extends AsyncTask<String , Void, String >{
 
-        @Override
-        protected String doInBackground(String... strings) {
-            String url = NetworkConnector.getInstance().getDefaultUrl()+"getUserLevel.php?minor="+strings[0];
-            Log.d("CCLAB_URL",url);
-            String result = NetworkConnector.getInstance().get(url);
-            Log.d("CCLAB_RSLT",result);
+            @Override
+            protected String doInBackground(String... strings) {
+                String url = NetworkConnector.getInstance().getDefaultUrl()+"getUserLevel.php?minor="+strings[0];
+                Log.d("CCLAB_URL",url);
+                String result = NetworkConnector.getInstance().get(url);
+                Log.d("CCLAB_RSLT",result);
 
-            return result;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            Log.d("QueryPost",s);
-            if(!s.equals("failed")){
-                sendUserLevelResult(s);
+                return result;
             }
-        }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                Log.d("QueryPost",s);
+                if(!s.equals("failed")){
+                    sendUserLevelResult(s);
+                }
+            }
     }
 
     void sendUserLevelResult(String result){

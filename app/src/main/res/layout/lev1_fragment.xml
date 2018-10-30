@@ -138,6 +138,7 @@
             android:weightSum="2">
 
             <Button
+                android:id="@+id/order"
                 android:layout_margin="1dp"
                 android:background="@color/colorWhite"
                 android:layout_width="0dp"
@@ -152,6 +153,7 @@
                 android:textColor="@color/colorBtn"
                 android:textSize="25sp" />
             <Button
+                android:id="@+id/membership"
                 android:background="@color/colorWhite"
                 android:layout_margin="1dp"
                 android:layout_width="0dp"
@@ -174,6 +176,7 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/order_list"
                 android:background="@color/colorWhite"
                 android:layout_margin="1dp"
                 android:layout_width="0dp"
@@ -187,6 +190,7 @@
                 android:textColor="@color/colorBtn"
                 android:textSize="20sp"/>
             <Button
+                android:id="@+id/event"
                 android:background="@color/colorWhite"
                 android:layout_margin="1dp"
                 android:layout_width="0dp"
