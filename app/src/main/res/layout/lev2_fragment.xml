@@ -23,7 +23,7 @@
         android:weightSum="2"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorlightGray"
+        android:background="@color/color_lightGray"
         style="?android:attr/buttonBarStyle">
         <Button
             android:layout_width="0dp"

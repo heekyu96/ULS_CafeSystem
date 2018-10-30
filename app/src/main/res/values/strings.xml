@@ -23,9 +23,14 @@
     <string name="orderAccept">주문접수</string>
     <string name="orderCook">제조 중</string>
     <string name="orderComplete">제조완료</string>
+
+    <!--Manager-->
     <string name="devices">My devices</string>
     <string name="leave">Leave</string>
     <string name="turnOn">Trun on</string>
     <string name="sleep">Sleep</string>
+    <string name="light">조명</string>
+    <string name="airCondition">에어컨</string>
+    <string name="coffeMachine">커피머신</string>
 </resources>
 
