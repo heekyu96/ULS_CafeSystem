@@ -52,6 +52,7 @@
                     android:layout_marginStart="15dp"
                     android:background="@drawable/iot_button_style">
                     <ImageButton
+                        android:background="@color/colorInvisible"
                         android:id="@+id/lightbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -76,6 +77,7 @@
                     android:layout_marginStart="10dp"
                     android:background="@drawable/iot_button_style">
                     <ImageButton
+                        android:background="@color/colorInvisible"
                         android:id="@+id/airbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
@@ -100,6 +102,7 @@
                     android:layout_marginStart="10dp"
                     android:background="@drawable/iot_button_style">
                     <ImageButton
+                        android:background="@color/colorInvisible"
                         android:id="@+id/mcbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"

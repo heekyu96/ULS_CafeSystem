@@ -10,5 +10,6 @@
     <color name="cancelBtn">#aea097</color>
     <color name="color_lightGray">#ceede8e8</color>
     <color name="colorDark_gray">#cc333333</color>
+    <color name="colorInvisible">#00333333</color>
 </resources>
 
