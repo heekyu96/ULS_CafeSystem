@@ -3,11 +3,131 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--########## Slider ##########-->
+    <LinearLayout
+        android:id="@+id/slider_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_middle_guide"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <!--########## MIDDLE GUIDE ##########-->
     <TextView
-        android:id="@+id/userText"
-        android:text="DEFAULT PAGE"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/main_middle_guide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:background="#785c4e"
+        android:paddingTop="8dp"
+        android:text="@string/endGuide"
+        android:textAlignment="center"
+        android:textColor="#fff" />
+
+
+    <!--########## Menu Buttons ##########-->
+    <LinearLayout
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_end_guide"
+        android:layout_below="@+id/main_middle_guide"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <!--########## First linear Buttons ##########-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_margin="1dp"
+                android:background="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@mipmap/ic_coffee"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/menu"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/membership"
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:drawableTop="@mipmap/ic_membership"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="10dp"
+                android:text="@string/membership"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!--########## Second linear Buttons ##########-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/order_list"
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_store"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="18dp"
+                android:text="@string/store"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="20sp"/>
+            <Button
+                android:id="@+id/event"
+                android:background="@color/colorWhite"
+                android:layout_margin="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/event"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBtn"
+                android:textSize="28sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--########## END GUIDE ##########-->
+    <TextView
+        android:id="@+id/main_end_guide"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGray"
+        android:paddingTop="12dp"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
 </RelativeLayout>

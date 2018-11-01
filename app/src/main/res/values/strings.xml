@@ -2,6 +2,7 @@
     <string name="app_name">COFFEE</string>
     <string name="endGuide">완료 예정시간은 4분 입니다.\n 잠시만 기다려 주세요.</string>
     <!--end guide-->
+    <string name="welcome">Welcome to COFFEE!</string>
     <string name="haveAgoodTime">오늘도 즐거운 하루 되세요.</string>
     <string name="bottomGuide">충북대점에 오신걸 환영합니다!</string>
     <!--menu bar-->
@@ -15,7 +16,10 @@
     <string name="stock">Stock</string>
     <string name="staff">Staff</string>
     <!--order-->
-    <string name="kanu">KANU</string>
+    <string name="kanu_Americano">KANU 아메리카노</string>
+    <string name="maxim">Maxim 커피믹스</string>
+    <string name="nescafe">Nescafe 수프리모 커피믹스</string>
+    <string name="greentea">녹차</string>
     <string name="orderitem">- KANU</string>
     <string name="complete">완료</string>
     <string name="cancel">취소</string>
