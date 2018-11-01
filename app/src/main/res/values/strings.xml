@@ -16,9 +16,9 @@
     <string name="stock">Stock</string>
     <string name="staff">Staff</string>
     <!--order-->
-    <string name="kanuAmericano">KANU 아메리카노</string>
-    <string name="maxim">Maxim 커피믹스</string>
-    <string name="nescafe">Nescafe 수프리모 커피믹스</string>
+    <string name="kanuAmericano">아메리카노</string>
+    <string name="maxim">커피믹스</string>
+    <string name="nescafe">수프리모 커피믹스</string>
     <string name="greentea">녹차</string>
     <string name="orderitem">- KANU</string>
     <string name="complete">완료</string>
