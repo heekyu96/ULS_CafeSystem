@@ -2,15 +2,18 @@ package com.example.heegi.uls_cafesystem.activities;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.heegi.uls_cafesystem.fragments.DefaultFragment;
 import com.example.heegi.uls_cafesystem.fragments.Level1Fragment;
@@ -93,10 +96,29 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        }
+        boolean show()
+        {
 
+            AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+            builder.setTitle("화면전환 안내");
+            builder.setMessage("새로운 사용자 화면으로 연결할까요?");
+            builder.setPositiveButton("예",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+            builder.setNegativeButton("아니오",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(getApplicationContext(),"아니오를 선택했습니다.",Toast.LENGTH_LONG).show();
+                        }
+                    });
+            builder.show();
 
         }
-    }
+
+
 
 
 }

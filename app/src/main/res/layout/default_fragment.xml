@@ -4,30 +4,22 @@
     android:layout_height="match_parent">
 
     <!--########## Slider ##########-->
-    <LinearLayout
-        android:id="@+id/slider_frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/main_middle_guide"
-        android:orientation="horizontal"
-        android:weightSum="7">
-
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_middle_guide">
 
-    </LinearLayout>
+        </android.support.v4.view.ViewPager>
 
     <!--########## MIDDLE GUIDE ##########-->
     <TextView
         android:id="@+id/main_middle_guide"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="25dp"
         android:layout_centerVertical="true"
         android:background="#785c4e"
         android:paddingTop="8dp"
-        android:text="@string/endGuide"
         android:textAlignment="center"
         android:textColor="#fff" />
 
@@ -88,19 +80,21 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/order_list"
-                android:background="@color/colorWhite"
+                android:id="@+id/store"
                 android:layout_margin="1dp"
+                android:background="@color/colorWhite"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/ic_store"
+                android:drawableStart="@mipmap/ic_store"
                 android:fontFamily="sans-serif-black"
-                android:paddingTop="18dp"
                 android:text="@string/store"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
                 android:textAllCaps="false"
                 android:textColor="@color/colorBtn"
-                android:textSize="20sp"/>
+                android:textSize="25sp" />
+
             <Button
                 android:id="@+id/event"
                 android:background="@color/colorWhite"
