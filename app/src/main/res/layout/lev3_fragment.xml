@@ -183,6 +183,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="?android:attr/buttonBarButtonStyle"
+            android:drawableStart="@mipmap/ic_sleep"
             android:textAllCaps="false"
             android:textSize="18sp"
             android:textColor="@color/colorDark_gray"
