@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        />
+
+    <View
+        android:id="@+id/menubar_underline"
+        android:layout_below="@id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/completeBtn"/>
+
+
+    <LinearLayout
+        android:id="@+id/kanuBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menubar_underline"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_kanu"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/kanu"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:text="@string/kanuAmericano"
+            android:textSize="16sp"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/textline1"
+        android:layout_below="@+id/kanuBtn"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+
+    <LinearLayout
+        android:id="@+id/maximBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textline1"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_maxim"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/maxim"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:text="@string/maxim"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/textline2"
+        android:layout_below="@+id/maximBtn"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+
+    <LinearLayout
+        android:id="@+id/nescafeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textline2"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_nescafe"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/nescafe"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:text="@string/nescafe"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/textline3"
+        android:layout_below="@+id/nescafeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+
+    <LinearLayout
+        android:id="@+id/greenteaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textline3"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_greentea"
+            android:scaleType="centerInside"
+            />
+        <TextView
+            android:id="@+id/greentea"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:textAlignment="center"
+            android:text="@string/greentea"
+            android:textSize="16sp"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/textline4"
+        android:layout_below="@+id/greenteaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorGray"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textline4"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:background="@color/completeBtn"
+        android:textColor="@color/colorWhite"
+        android:layout_centerInParent="true"
+        android:text="@string/gotoMain"/>
+</RelativeLayout>

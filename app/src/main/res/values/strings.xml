@@ -21,6 +21,7 @@
     <string name="nescafe">수프리모 커피믹스</string>
     <string name="greentea">녹차</string>
     <string name="orderitem">- KANU</string>
+    <string name="gotoMain">메인으로 돌아가기</string>
     <string name="complete">완료</string>
     <string name="cancel">취소</string>
     <string name="attendance">출근부 관리</string>
