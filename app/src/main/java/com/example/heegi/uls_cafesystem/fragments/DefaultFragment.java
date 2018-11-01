@@ -12,10 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.heegi.uls_cafesystem.R;
+import com.example.heegi.uls_cafesystem.global.NetworkConnector;
+
+import java.util.ArrayList;
+
+import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
+
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 public class DefaultFragment extends Fragment {
-    private ViewPager viewPager;
+    private AutoScrollViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
 
     @Nullable
@@ -27,7 +35,10 @@ public class DefaultFragment extends Fragment {
         viewPagerAdapter = new ViewPagerAdapter(getActivity());
 
 
+
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setInterval(3000);
+        viewPager.startAutoScroll();
         return rootView;
     }
 
@@ -35,10 +46,15 @@ public class DefaultFragment extends Fragment {
         private Context context;
         private LayoutInflater layoutInflater;
         private Integer[] images = {R.drawable.one, R.drawable.two, R.drawable.three};
+        private ArrayList<String> data;
 
 
         public ViewPagerAdapter(Context context) {
             this.context = context;
+            data = new ArrayList<>();
+            data.add(NetworkConnector.getInstance().getDefaultUrl()+"src/one.png");
+            data.add(NetworkConnector.getInstance().getDefaultUrl()+"src/two.png");
+            data.add(NetworkConnector.getInstance().getDefaultUrl()+"src/three.png");
         }
 
         @Override
@@ -48,10 +64,7 @@ public class DefaultFragment extends Fragment {
 
         @Override
         public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-            super.destroyItem(container, position, object);
-            ViewPager viewPager = (ViewPager) container;
-            View view = (View) object;
-            viewPager.removeView(view);
+            container.removeView((View)object);
         }
 
         @Override
@@ -62,14 +75,13 @@ public class DefaultFragment extends Fragment {
         @NonNull
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
-            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View view = layoutInflater.inflate(R.layout.slider, null);
-            ImageView imageView = (ImageView) view.findViewById(R.id.slider);
-            imageView.setImageResource(images[position]);
-
-            ViewPager viewPager = (ViewPager) container;
-            viewPager.addView(view, position);
-            return view;
+            //뷰페이지 슬라이딩 할 레이아웃 인플레이션
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+            View v = inflater.inflate(R.layout.slider,null);
+            ImageView image_container = (ImageView) v.findViewById(R.id.slider);
+            Glide.with(context).load(data.get(position)).into(image_container);
+            container.addView(v);
+            return v;
         }
     }
 }

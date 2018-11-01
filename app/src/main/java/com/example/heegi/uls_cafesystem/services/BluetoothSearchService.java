@@ -35,7 +35,7 @@ public class BluetoothSearchService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        recentBeaconMinor="";
+        recentBeaconMinor = "";
         Log.d("BluetoothService", "OnCreate");
         beaconManager = new BeaconManager(getApplicationContext());
         beaconRangingListener = new BeaconRangingListener();
@@ -74,13 +74,18 @@ public class BluetoothSearchService extends Service {
                         + " RSSI : " + result.getRssi() + " dBm\n");
 
             }
+            if(beacons.size()!=0){
                 beaconVerifing(beacons.get(0).getMinor() + "");
+            }else{
+                beaconVerifing(recentBeaconMinor);
+            }
+
 
         }
 
-        private void beaconVerifing(String beaconMinor){
+        private void beaconVerifing(String beaconMinor) {
 
-            if(!recentBeaconMinor.equals(beaconMinor)){
+            if (!recentBeaconMinor.equals(beaconMinor)) {
                 UserLeveQuery userLeveQuery = new UserLeveQuery();
                 userLeveQuery.execute(beaconMinor);
 
@@ -95,32 +100,32 @@ public class BluetoothSearchService extends Service {
     }
 
     @SuppressLint("StaticFieldLeak")
-    private class UserLeveQuery extends AsyncTask<String , Void, String >{
+    private class UserLeveQuery extends AsyncTask<String, Void, String> {
 
-            @Override
-            protected String doInBackground(String... strings) {
-                String url = NetworkConnector.getInstance().getDefaultUrl()+"getUserLevel.php?minor="+strings[0];
-                Log.d("CCLAB_URL",url);
-                String result = NetworkConnector.getInstance().get(url);
-                Log.d("CCLAB_RSLT",result);
+        @Override
+        protected String doInBackground(String... strings) {
+            String url = NetworkConnector.getInstance().getDefaultUrl() + "getUserLevel.php?minor=" + strings[0];
+            Log.d("CCLAB_URL", url);
+            String result = NetworkConnector.getInstance().get(url);
+            Log.d("CCLAB_RSLT", result);
 
-                return result;
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.d("QueryPost", s);
+            if (!s.equals("failed")) {
+                sendUserLevelResult(s);
             }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                Log.d("QueryPost",s);
-                if(!s.equals("failed")){
-                    sendUserLevelResult(s);
-                }
-            }
+        }
     }
 
-    void sendUserLevelResult(String result){
-        Log.d("sendUserLevelResult",result);
+    void sendUserLevelResult(String result) {
+        Log.d("sendUserLevelResult", result);
         Intent intent = new Intent("UserLevel");
-        intent.putExtra("UserLevel",result);
+        intent.putExtra("UserLevel", result);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
