@@ -2,6 +2,7 @@ package com.example.heegi.uls_cafesystem.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -43,6 +44,8 @@ public class DefaultFragment extends Fragment {
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setInterval(3000);
         viewPager.startAutoScroll();
+
+        rootView.setBackgroundColor(getResources().getColor(R.color.colorGray));
 
         menu = (Button)rootView.findViewById(R.id.menu);
         membership = (Button)rootView.findViewById(R.id.membership);
