@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.main_frame,defaultFragment);
+        fragmentTransaction.add(R.id.main_frame, defaultFragment);
         fragmentTransaction.commit();
 
     }
@@ -76,49 +76,33 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String result = intent.getStringExtra("UserLevel");
-            Log.d("Main_receiver", "Got message: " + result+"/"+Integer.valueOf(result));
+            Log.d("Main_receiver", "Got message: " + result + "/" + Integer.valueOf(result));
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
+
             switch (Integer.valueOf(result)) {
+                case 0:
+                    fragmentTransaction.replace(R.id.main_frame, defaultFragment);
+                    fragmentTransaction.commit();
+                    break;
                 case 1:
-                    fragmentTransaction.replace(R.id.main_frame,level1Fragment);
+                    fragmentTransaction.replace(R.id.main_frame, level1Fragment);
                     fragmentTransaction.commit();
                     break;
                 case 2:
-                    fragmentTransaction.replace(R.id.main_frame,level2Fragment);
+                    fragmentTransaction.replace(R.id.main_frame, level2Fragment);
                     fragmentTransaction.commit();
                     break;
                 case 3:
-                    fragmentTransaction.replace(R.id.main_frame,level3Fragment);
+                    fragmentTransaction.replace(R.id.main_frame, level3Fragment);
                     fragmentTransaction.commit();
                     break;
 
             }
-
-        }
-        boolean show()
-        {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-            builder.setTitle("화면전환 안내");
-            builder.setMessage("새로운 사용자 화면으로 연결할까요?");
-            builder.setPositiveButton("예",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                        }
-                    });
-            builder.setNegativeButton("아니오",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(getApplicationContext(),"아니오를 선택했습니다.",Toast.LENGTH_LONG).show();
-                        }
-                    });
-            builder.show();
-
         }
 
 
-
+    }
 
 }

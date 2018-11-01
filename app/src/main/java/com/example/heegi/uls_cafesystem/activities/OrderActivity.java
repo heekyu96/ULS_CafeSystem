@@ -9,10 +9,10 @@ import android.widget.ImageButton;
 import com.example.heegi.uls_cafesystem.R;
 
 public class OrderActivity extends AppCompatActivity {
-    ImageButton kanu;
-    ImageButton maxim;
-    ImageButton nescafe;
-    ImageButton greentea;
+    Button kanu;
+    Button maxim;
+    Button nescafe;
+    Button greentea;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
