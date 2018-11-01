@@ -1,4 +1,4 @@
-package com.example.heegi.uls_cafesystem.fragments;
+package com.example.heegi.uls_cafesystem.DataForm;
 
 public class Level2CardData {
     private String orderNo;

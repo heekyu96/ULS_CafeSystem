@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,8 +32,6 @@ public class DefaultFragment extends Fragment {
 
         viewPager = rootView.findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getActivity());
-
-
 
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setInterval(3000);

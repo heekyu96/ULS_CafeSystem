@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.heegi.uls_cafesystem.DataForm.Level2CardData;
 import com.example.heegi.uls_cafesystem.R;
 
 import java.util.ArrayList;
