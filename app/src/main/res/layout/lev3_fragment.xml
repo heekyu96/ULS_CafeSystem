@@ -51,12 +51,14 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="15dp"
                     android:background="@drawable/iot_button_style">
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/lightbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"
                         android:src="@mipmap/ic_light"/>
                     <TextView
+                        android:id="@+id/lighttext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -73,12 +75,14 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/iot_button_style">
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/airbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"
                         android:src="@mipmap/ic_aircondition"/>
                     <TextView
+                        android:id="@+id/airtext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -95,17 +99,18 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/iot_button_style">
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/mcbutton"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"
                         android:src="@mipmap/ic_coffeemachine"/>
                     <TextView
+                        android:id="@+id/mctext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textSize="16sp"
-                        android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         android:text="@string/coffeMachine"/>
                 </LinearLayout>
