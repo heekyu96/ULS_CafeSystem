@@ -40,8 +40,9 @@ public class OrderListActivity extends AppCompatActivity {
         recyclerViewAdapter  = new RecyclerViewAdapter(list);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+        return recyclerView;
     }
 
 
@@ -70,7 +71,7 @@ public class OrderListActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return return item.size();
+            return item.size();
         }
     }
 
