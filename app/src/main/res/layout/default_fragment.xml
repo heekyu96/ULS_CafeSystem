@@ -4,28 +4,13 @@
     android:layout_height="match_parent">
 
     <!--########## Slider ##########-->
-    <LinearLayout
-        android:id="@+id/slider_frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/main_middle_guide"
-        android:orientation="horizontal"
-        android:weightSum="7">
-
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
-<<<<<<< HEAD
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-=======
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_middle_guide">
 
         </android.support.v4.view.ViewPager>
-
->>>>>>> 94784927617395193fc40810f72a6f8d9bb05f2d
-
-    </LinearLayout>
 
     <!--########## MIDDLE GUIDE ##########-->
     <TextView
