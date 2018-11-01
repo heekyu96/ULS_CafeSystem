@@ -163,6 +163,7 @@
         android:background="@color/colorGray"/>
 
     <Button
+        android:id="@+id/gotomain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textline4"
