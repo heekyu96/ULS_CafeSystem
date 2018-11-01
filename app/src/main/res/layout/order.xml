@@ -4,61 +4,126 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
 
-    <ImageButton
-        android:id="@+id/kanu"
+    <!--########## Menu Bar ##########-->
+    <TextView
+        android:id="@+id/menu_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:src="@mipmap/ic_kanu"
-        android:padding="10dp" />
-    
+        android:padding="20dp"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="@string/menu"/>
+
+    <!--########## KANU AMERICANO ##########-->
+    <CheckBox
+        android:id="@+id/kanu"
+        android:layout_below="@id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/ic_kanu"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/kanu_Americano"
+        android:textSize="18sp"/>
     <View
         android:id="@+id/textline1"
-        android:layout_below="@+id/kanu"
+        android:layout_below="@id/kanu"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/colorGray"/>
-    <ImageButton
+
+    <!--########## MAXIM COFFEE ##########-->
+    <CheckBox
         android:id="@+id/maxim"
         android:layout_below="@id/textline1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:src="@mipmap/ic_maxim"
-        android:padding="10dp"/>
+        android:drawableStart="@mipmap/ic_maxim"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/maxim"
+        android:textSize="18sp"/>
+
+
     <View
         android:id="@+id/textline2"
-        android:layout_below="@+id/maxim"
+        android:layout_below="@id/maxim"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/colorGray"/>
-    <ImageButton
+
+
+    <!--########## NESCAFE COFFEE ##########-->
+    <CheckBox
         android:id="@+id/nescafe"
         android:layout_below="@id/textline2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:src="@mipmap/ic_nescafe"
-        android:padding="10dp"/>
+        android:drawableStart="@mipmap/ic_nescafe"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/nescafe"
+        android:textSize="18sp"/>
+
     <View
         android:id="@+id/textline3"
-        android:layout_below="@+id/nescafe"
+        android:layout_below="@id/nescafe"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/colorGray"/>
-    <ImageButton
+
+    <!--########## GREENTEA ##########-->
+    <CheckBox
         android:id="@+id/greentea"
         android:layout_below="@id/textline3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:src="@mipmap/ic_greentea"
-        android:padding="10dp"/>
+        android:drawableStart="@mipmap/ic_greentea"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/greentea"
+        android:textSize="18sp"/>
+
     <View
         android:id="@+id/textline4"
-        android:layout_below="@+id/greentea"
+        android:layout_below="@id/greentea"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/colorGray"/>
+
+
+
+    <!--########## OK BUTTON ##########-->
+    <!--<Button-->
+        <!--android:layout_below="@id/textline6"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/completeBtn"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="@string/complete"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textline4"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@color/completeBtn"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:text="@string/complete"/>
+    </LinearLayout>
 
 </RelativeLayout>
