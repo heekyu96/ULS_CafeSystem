@@ -138,7 +138,7 @@
             android:weightSum="2">
 
             <Button
-                android:id="@+id/order"
+                android:id="@+id/order1"
                 android:layout_margin="1dp"
                 android:background="@color/colorWhite"
                 android:layout_width="0dp"
@@ -176,7 +176,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/order_list"
+                android:id="@+id/lev1_order_list"
                 android:background="@color/colorWhite"
                 android:layout_margin="1dp"
                 android:layout_width="0dp"
