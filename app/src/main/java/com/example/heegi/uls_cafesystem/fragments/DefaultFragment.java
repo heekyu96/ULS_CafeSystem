@@ -68,7 +68,7 @@ public class DefaultFragment extends Fragment {
             imageView.setImageResource(images[position]);
 
             ViewPager viewPager = (ViewPager) container;
-            viewPager.addView(view, 0);
+            viewPager.addView(view, position);
             return view;
         }
     }
