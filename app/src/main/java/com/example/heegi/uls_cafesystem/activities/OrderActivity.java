@@ -1,15 +1,12 @@
 package com.example.heegi.uls_cafesystem.activities;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.heegi.uls_cafesystem.R;
 import com.example.heegi.uls_cafesystem.global.NetworkConnector;
@@ -41,25 +38,27 @@ public class OrderActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            OrderQuery orderQuery = new OrderQuery();
+            InComeOrderQuery inComeOrderQuery = new InComeOrderQuery();
 
             switch (v.getId()){
                 case R.id.kanu:
-                    orderQuery.execute("kanu","aaaa");
+                    inComeOrderQuery.execute("KANU","조은빈");
                     break;
                 case R.id.maxim:
-                    orderQuery.execute("maxim","aaaa");
+                    inComeOrderQuery.execute("MAXIM","조은빈");
                     break;
                 case R.id.nescafe:
-                    orderQuery.execute("nescafe","aaaa");
+                    inComeOrderQuery.execute("NESCAFE","조은빈");
                     break;
                 case R.id.greentea:
-                    orderQuery.execute("greentea","aaaa");
+                    inComeOrderQuery.execute("GREENTEA","조은빈");
                     break;
             }
+            Toast.makeText(OrderActivity.this, "주문 접수 완료.", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
-    private class OrderQuery extends AsyncTask<String , Void, String >{
+    private class InComeOrderQuery extends AsyncTask<String , Void, String >{
 
         @Override
         protected String doInBackground(String... strings) {

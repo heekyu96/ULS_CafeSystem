@@ -83,19 +83,27 @@ public class MainActivity extends AppCompatActivity {
 
             switch (Integer.valueOf(result)) {
                 case 0:
+                    getSupportFragmentManager().popBackStack();
                     fragmentTransaction.replace(R.id.main_frame, defaultFragment);
+                    fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                     break;
                 case 1:
+                    getSupportFragmentManager().popBackStack();
                     fragmentTransaction.replace(R.id.main_frame, level1Fragment);
+                    fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                     break;
                 case 2:
+                    getSupportFragmentManager().popBackStack();
                     fragmentTransaction.replace(R.id.main_frame, level2Fragment);
+                    fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                     break;
                 case 3:
+                    getSupportFragmentManager().popBackStack();
                     fragmentTransaction.replace(R.id.main_frame, level3Fragment);
+                    fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                     break;
 
