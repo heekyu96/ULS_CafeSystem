@@ -73,13 +73,13 @@ public class Level2Fragment extends Fragment {
             recyclerViewHolder.complete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getContext(), "완료", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "완료", Toast.LENGTH_SHORT).show();
                 }
             });
             recyclerViewHolder.cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getContext(), "삭제", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "삭제", Toast.LENGTH_SHORT).show();
                 }
             });
         }
