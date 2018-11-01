@@ -15,10 +15,10 @@ import com.example.heegi.uls_cafesystem.R;
 import com.example.heegi.uls_cafesystem.global.NetworkConnector;
 
 public class OrderActivity extends AppCompatActivity {
-    CheckBox kanu;
-    CheckBox maxim;
-    CheckBox nescafe;
-    CheckBox greentea;
+    Button kanu;
+    Button maxim;
+    Button nescafe;
+    Button greentea;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -41,14 +41,20 @@ public class OrderActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            OrderQuery orderQuery = new OrderQuery();
+
             switch (v.getId()){
                 case R.id.kanu:
+                    orderQuery.execute("kanu","aaaa");
                     break;
                 case R.id.maxim:
+                    orderQuery.execute("maxim","aaaa");
                     break;
                 case R.id.nescafe:
+                    orderQuery.execute("nescafe","aaaa");
                     break;
                 case R.id.greentea:
+                    orderQuery.execute("greentea","aaaa");
                     break;
             }
         }
@@ -57,9 +63,9 @@ public class OrderActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings) {
-            String url = NetworkConnector.getInstance().getDefaultUrl()+"postUserOrder.php?minor="+strings[0];
+            String url = NetworkConnector.getInstance().getDefaultUrl()+"UserOrder.php?menu="+strings[0]+"&ordername="+strings[1];
             Log.d("CCLAB_URL",url);
-            String result = NetworkConnector.getInstance().post(url,strings[1]);
+            String result = NetworkConnector.getInstance().get(url);
             Log.d("CCLAB_RSLT",result);
 
             return result;
