@@ -162,8 +162,9 @@ public class Level2Fragment extends Fragment {
             super.onPostExecute(s);
             if(s.contains("noItem")) {
                 recyclerViewAdapter.setItem(new ArrayList<Level2CardData>());
+                recyclerViewAdapter.notifyDataSetChanged();
             }else {
-                ArrayList<Level2CardData> data = recyclerViewAdapter.getItem();
+                ArrayList<Level2CardData> data = new ArrayList<>();
                 JsonParser parser = new JsonParser();
                 JsonArray array = parser.parse(s).getAsJsonArray();
 
