@@ -91,12 +91,17 @@ public class Level2Fragment extends Fragment {
             recyclerViewHolder.complete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    CompleteQuery completeQuery = new CompleteQuery();
+                    completeQuery.execute(level2CardData.getOrderNo());
                     Toast.makeText(getActivity(), "완료", Toast.LENGTH_SHORT).show();
+
                 }
             });
             recyclerViewHolder.cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    CompleteQuery completeQuery = new CompleteQuery();
+                    completeQuery.execute(level2CardData.getOrderNo());
                     Toast.makeText(getActivity(), "삭제", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -124,6 +129,23 @@ public class Level2Fragment extends Fragment {
         }
     }
 
+    private class CompleteQuery extends AsyncTask<String, Void, String>{
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String url = NetworkConnector.getInstance().getDefaultUrl()+"CCOrder.php?idx="+strings[0];
+            String result = NetworkConnector.getInstance().get(url);
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String s){
+            super.onPostExecute(s);
+            OutComeOrderQuery outComeOrderQuery = new OutComeOrderQuery();
+            outComeOrderQuery.execute();
+        }
+
+    }
     private class OutComeOrderQuery extends AsyncTask<String , Void, String >{
 
         @Override
