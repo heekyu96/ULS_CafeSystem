@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -23,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.OrderActivity"/>
+        <activity android:name=".activities.OrderListActivity"/>
+        <activity android:name=".activities.DefaultMenuActivity"/>
 
         <service android:name=".services.BluetoothSearchService"/>
 

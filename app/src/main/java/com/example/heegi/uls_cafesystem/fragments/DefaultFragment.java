@@ -40,7 +40,7 @@ public class DefaultFragment extends Fragment {
         viewPagerAdapter = new ViewPagerAdapter(getActivity());
 
         viewPager.setAdapter(viewPagerAdapter);
-        viewPager.setInterval(3000);
+        viewPager.setInterval(5000);
         viewPager.startAutoScroll();
 
         rootView.setBackgroundColor(getResources().getColor(R.color.colorGray));
